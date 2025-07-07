@@ -1,7 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 1rem;
-  box-sizing: border-box;
   line-height: 1.6;
+  padding: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#menu-button {
+  display: block;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #d1e8e4;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+.about-photo {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4A6E78;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+  background-color: #417D7A;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
 }

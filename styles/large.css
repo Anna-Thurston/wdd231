@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .about-photo {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .about,
+    .photo {
+        flex: 1;
+    }
+
+    .filters {
+        justify-content: flex-start;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+} 
