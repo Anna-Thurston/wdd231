@@ -5,12 +5,4 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener("click", () => {
         navMenu.classList.toggle("hidden");
     });
-
-// Optional: add active class for wayfinding
-    const links = navMenu.querySelectorAll("a");
-    links.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add("active");
-        }
-    });
 });
