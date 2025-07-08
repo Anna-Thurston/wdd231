@@ -4,6 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuButton.addEventListener("click", () => {
         menuButton.classList.toggle("show");
-        navMenu.classList.toggle("hidden");
+        navMenu.classList.toggle("show");
     });
 });

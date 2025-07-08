@@ -1,14 +1,26 @@
 @media screen and (min-width: 768px) {
-    #menu-button {
+    .hamburger {
         display: none;
     }
 
-    nav {
+    /* .navigation {
         display: flex !important;
         flex-direction: row;
         justify-content: flex-end;
         background-color: transparent;
         padding: 0;
+    } */
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigation li {
+        margin: 0;
     }
 
     .about-photo {

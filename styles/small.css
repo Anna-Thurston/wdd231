@@ -24,8 +24,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-}
+  background-color: #3D405B;
+  color: white;
+  padding: 1rem;}
 
 .header-left {
   display: flex;
@@ -33,44 +34,62 @@ header {
   gap: 0.5rem;
 }
 
-#menu-button {
-  display: block;
-  font-size: 1.5rem;
+/* Hamburger Button */
+.hamburger {
   background: none;
   border: none;
-  cursor: pointer;
-}
-
-#menu-button::before {
-  content: "\2630"; /* ☰ icon */
   font-size: 2rem;
-  color: #3D405B;
+  cursor: pointer;
+  position: relative;
 }
 
-#menu-button.show::before {
-  content: "\00D7"; /* ✕ icon */
+.hamburger::before {
+  content: "\2630"; /* ☰ */
+  color: white;
 }
 
+.hamburger.show::before {
+  content: "\00D7"; /* ✕ */
+}
 
-nav {
+/* Navigation Styles */
+.navigation {
   display: none;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-nav a {
+  background-color: #3D405B;
   padding: 0.5rem;
-  text-decoration: none;
-  color: #333;
-  border-radius: 5px;
-  transition: background 0.3s;
 }
 
-nav a:hover,
-nav a.active {
-  background-color: #d1e8e4;
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin: 0.5rem 0;
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  min-height: 48px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #E07A60;
+}
+
+.navigation .current a {
+  font-weight: bold;
+  background-color: #E07A60;
+  color: white;
 }
 
 .hidden {
