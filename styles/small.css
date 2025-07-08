@@ -153,9 +153,9 @@ section {
 
 /* Completed courses */
 .course-card.completed {
-  background-color: #eaeaea;    /* Slate gray */
-  color: #fff;                  /* White text for contrast */
-  border-left: 6px solid #444; /* Coral accent */
+  background-color: #e0e0e0;
+  color: #000;
+  border-left: 6px solid #444;
 }
 
 /* In-progress courses */
