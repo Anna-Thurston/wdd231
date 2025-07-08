@@ -32,6 +32,16 @@
         justify-content: flex-start;
     }
 
+    .course-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .course-card {
+        flex: 1 1 150px;
+    }
+
     footer {
         font-size: 1rem;
     }

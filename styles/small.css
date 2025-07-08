@@ -131,13 +131,18 @@ section {
 }
 
 .course-card {
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
     background-color: #222;
-    color: #fff;
+    color: fff;
+    text-align: center;
+    font-weight: 600;
 }
 
+/* Completed course style */
 .course-card.completed {
     background-color: #000;
-    color: #fff;
+    color: fff;
 }
 
 
