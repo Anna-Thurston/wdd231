@@ -1,48 +1,66 @@
 @media screen and (min-width: 768px) {
+    /* Hide mobile menu */
     .hamburger {
         display: none;
     }
 
+    /* Center navigation bar horizontally */
     .navigation {
         display: block;
     }
-
     .navigation ul {
         display: flex;
-        gap: 1rem;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0;
+        margin: 0 auto 2rem;
+        max-width: 900px;
     }
-
     .navigation li {
         margin: 0;
     }
 
+    /* Layout for About + Photo section */
     .about-photo {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
         gap: 2rem;
-        align-items: start;
+        max-width: 900px;
+        margin: 0 auto 2rem;
+        padding: 0 1rem;
     }
-
     .about,
     .photo {
         flex: 1;
+        text-align: left;
     }
 
+    /* Course filters centered */
     .filters {
-        justify-content: flex-start;
-    }
-
-    .course-list {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
+        margin: 2rem 0;
     }
 
+    /* Two-column grid of course cards */
+    .course-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+        gap: 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1rem 2rem;
+    }
     .course-card {
-        flex: 1 1 150px;
+        margin: 0; /* spacing managed by grid */
     }
 
+    /* Center footer content within max-width */
     footer {
         font-size: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
     }
-} 
+}
