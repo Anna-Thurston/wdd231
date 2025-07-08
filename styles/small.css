@@ -131,18 +131,45 @@ section {
 }
 
 .course-card {
+    border-radius: 8px;
     padding: 1rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #222;  /* Incomplete */
-    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #fff;         /* Default: white card */
+    color: #000;                    /* Default text: black */
+    border-left: 6px solid #ccc;    /* Neutral accent for in-progress */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-.course-card.completed {
-    background-color: #000; /* Completed */
-    color: #fff;
+.course-card h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
 }
+
+.course-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+/* Completed courses */
+.course-card.completed {
+  background-color: #eaeaea;    /* Slate gray */
+  color: #fff;                  /* White text for contrast */
+  border-left: 6px solid #444; /* Coral accent */
+}
+
+/* In-progress courses */
+.course-card.in-progress {
+    background-color: #fff;
+    color: #000;
+    border-left: 5px solid #ccc; /* subtle gray stripe */
+}
+
+/* Hover effect */
+.course-card:hover {
+    transform: scale(1.02);
+}
+
 
 
 .filters {
