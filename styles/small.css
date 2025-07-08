@@ -118,6 +118,14 @@ main {
     margin-bottom: 2rem;
 }
 
+.photo {
+  text-align: center;
+}
+
+.photo img {
+  margin: 1rem auto;
+}
+
 .about-photo {
     display: block;
     margin-bottom: 2rem;
