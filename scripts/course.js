@@ -55,11 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredCourses.forEach(course => {
             const div = document.createElement('div');
             div.classList.add('course-card');
-            if (course.completed) div.classList.add('completed');
+            if (course.completed) {
+                div.classList.add('completed');
+            } else {
+                div.classList.add('in-progress');
+            }
 
-            div.textContent = course.courseId;
+            div.innerHTML = `
+                <h3>${course.courseId}</h3>
+                <p>${course.courseName}</p>
+                <p>Status: <strong>${course.completed ? 'Completed' : 'In Progress'}</strong></p>
+            `;
+
             courseList.appendChild(div);
-
             totalCredits += course.credit;
         });
 
@@ -82,4 +90,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
