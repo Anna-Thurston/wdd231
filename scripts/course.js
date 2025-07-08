@@ -33,7 +33,7 @@ const courses = [
         courseId: 'CSE 121b',
         courseName: 'JavaScript Language',
         credit: 2,
-        completed: true
+        completed: false
     },
     {
         courseId: 'WDD 231',
@@ -42,3 +42,44 @@ const courses = [
         completed: false
     }
 ];
+
+document.addEventListener("DOMContentLoaded", () => {
+    const courseList = document.querySelector('.course-list');
+    const summary = document.getElementById('credit-summary');
+    const buttons = document.querySelectorAll('.filters button');
+
+    function displayCourses(filteredCourses) {
+        courseList.innerHTML = '';
+        let totalCredits = 0;
+
+        filteredCourses.forEach(course => {
+            const div = document.createElement('div');
+            div.classList.add('course-card');
+            if (course.completed) div.classList.add('completed');
+
+            div.textContent = course.courseId;
+            courseList.appendChild(div);
+
+            totalCredits += course.credit;
+        });
+
+        summary.textContent = `The total credits for courses listed above is ${totalCredits}`;
+    }
+
+    // Initial display
+    displayCourses(courses);
+
+    // Filter by button
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.textContent;
+            if (filter === 'All') {
+                displayCourses(courses);
+            } else {
+                const filtered = courses.filter(c => c.courseId.startsWith(filter));
+                displayCourses(filtered);
+            }
+        });
+    });
+});
+
