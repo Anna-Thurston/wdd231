@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navMenu = document.getElementById("nav-menu");
 
     menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("show");
         navMenu.classList.toggle("hidden");
     });
 });

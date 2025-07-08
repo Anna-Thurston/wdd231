@@ -41,6 +41,17 @@ header {
   cursor: pointer;
 }
 
+#menu-button::before {
+  content: "\2630"; /* ☰ icon */
+  font-size: 2rem;
+  color: #3D405B;
+}
+
+#menu-button.show::before {
+  content: "\00D7"; /* ✕ icon */
+}
+
+
 nav {
   display: none;
   flex-direction: column;
