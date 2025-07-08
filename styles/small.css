@@ -1,152 +1,188 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  padding: 1rem;
-  background-color: #fff;
-  color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;   /* white background */
+    color: #000;              /* black text */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3D405B;
-  color: white;
-  padding: 1rem;}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;}
 
 .header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* Hamburger Button */
+
+#menu-button {
+    color: #fff;
+}
 .hamburger {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  position: relative;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
 }
 
 .hamburger::before {
-  content: "\2630"; /* ☰ */
-  color: white;
+    content: "\2630"; /* ☰ */
+    color: white;
 }
 
 .hamburger.show::before {
-  content: "\00D7"; /* ✕ */
+    content: "\00D7"; /* ✕ */
 }
 
 /* Navigation Styles */
+
+nav {
+    background-color: #000;
+}
+
+nav a {
+    color: #fff;
+    background-color: #222;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #444;
+}
+
+
 .navigation {
-  display: none;
-  background-color: #3D405B;
-  padding: 0.5rem;
+    display: none;
+    background-color: #3D405B;
+    padding: 0.5rem;
 }
 
 .navigation.show {
-  display: block;
+    display: block;
 }
 
 .navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navigation li {
-  margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
 .navigation a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-  min-height: 48px;
-  transition: background-color 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    min-height: 48px;
+    transition: background-color 0.3s ease;
 }
 
 .navigation a:hover {
-  background-color: #E07A60;
+    background-color: #E07A60;
 }
 
 .navigation .current a {
-  font-weight: bold;
-  background-color: #E07A60;
-  color: white;
+    font-weight: bold;
+    background-color: #E07A60;
+    color: white;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 main {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .about-photo {
-  display: block;
-  margin-bottom: 2rem;
+    display: block;
+    margin-bottom: 2rem;
 }
 
 section {
-  margin-bottom: 2rem;
+    background-color: #f4f4f4;
+    color: #000;
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
 }
 
+.course-card {
+    background-color: #222;
+    color: #fff;
+}
+
+.course-card.completed {
+    background-color: #000;
+    color: #fff;
+}
+
+
 .filters {
-  display: flex;
-  gap: 0.5rem;
-  margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
 }
 
 .filters button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #4A6E78;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #4A6E78;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .filters button:hover {
-  background-color: #417D7A;
+    background-color: #417D7A;
 }
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f4f4f4;
-  color: #333;
-  font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.9rem;
 }
 
 .social-links {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-links a {
-  margin: 0 0.5rem;
-  display: inline-block;
-  transition: transform 0.2s;
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: transform 0.2s;
 }
 
 .social-links a:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }

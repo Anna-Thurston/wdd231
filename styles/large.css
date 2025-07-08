@@ -3,13 +3,6 @@
         display: none;
     }
 
-    /* .navigation {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: flex-end;
-        background-color: transparent;
-        padding: 0;
-    } */
     .navigation {
         display: block;
     }
