@@ -48,16 +48,28 @@
     <!-- Page-specific content will be inserted here -->
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
-    <!-- <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p> -->
-    <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
+<footer>
+  <div class="footer-content">
+    <div class="contact-info">
+      <p><strong>Contact:</strong></p>
+      <p>📍 Murfreesboro Chamber of Commerce<br>123 Main Street, Murfreesboro, TN</p>
+      <p>📞 (615) 555-1234</p>
+      <p>✉️ info@murfreesborochamber.org</p>
+    </div>
 
-  <!-- JavaScript for dynamic year and last modified -->
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+    <div class="developer-info">
+      <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
+      <p>Anna Thurston | WDD 231</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Populate dynamic year and last modified date
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
+</script>
+
 </body>
 
