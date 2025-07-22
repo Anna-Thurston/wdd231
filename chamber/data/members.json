@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Volunteer Coffee Roasters",
+      "address": "789 Market Street, Murfreesboro, TN 37129",
+      "phone": "(615) 555-9876",
+      "website": "https://volunteercoffee.com",
+      "image": "images/members/volunteercoffee.jpg",
+      "membership": 1,
+      "description": "Locally roasted, ethically sourced coffee for businesses and individuals.",
+      "services": ["Coffee Delivery", "Wholesale", "In-store Tasting"]
+    },
+    {
+      "name": "Cedar & Pine Home Interiors",
+      "address": "234 Heritage Way, Murfreesboro, TN 37130",
+      "phone": "(615) 555-3456",
+      "website": "https://cedarpineinteriors.com",
+      "image": "images/members/cedarpine.jpg",
+      "membership": 2,
+      "description": "Interior design and furniture boutique specializing in Southern charm.",
+      "services": ["Interior Design", "Custom Furniture", "Workshops"]
+    },
+    {
+      "name": "Smith & Co. Accounting",
+      "address": "123 Main Street, Murfreesboro, TN 37130",
+      "phone": "(615) 555-1234",
+      "website": "https://smithco.com",
+      "image": "images/members/smithco.jpg",
+      "membership": 3,
+      "description": "Serving small businesses with personalized tax and accounting solutions.",
+      "services": ["Tax Prep", "Payroll", "Business Consulting"]
+    },
+    {
+      "name": "Rutherford Family Dentistry",
+      "address": "456 Oak Ave, Murfreesboro, TN 37129",
+      "phone": "(615) 555-5678",
+      "website": "https://rutherforddentistry.com",
+      "image": "images/members/rfdentistry.jpg",
+      "membership": 2,
+      "description": "Gentle dental care for the whole family in a modern, friendly clinic.",
+      "services": ["Cleanings", "Cosmetic Dentistry", "Orthodontics"]
+    },
+    {
+      "name": "Middle Tennessee IT Solutions",
+      "address": "100 Innovation Dr, Murfreesboro, TN 37128",
+      "phone": "(615) 555-1122",
+      "website": "https://mtnit.com",
+      "image": "images/members/mtnit.jpg",
+      "membership": 1,
+      "description": "Managed IT services and cybersecurity for local businesses.",
+      "services": ["Cloud Backup", "IT Support", "Networking"]
+    },
+    {
+      "name": "Murfreesboro Web Design",
+      "address": "456 Commerce Blvd, Murfreesboro, TN 37130",
+      "phone": "(615) 555-5643",
+      "website": "https://mbowebdesign.com",
+      "image": "images/members/webdesign.jpg",
+      "membership": 3,
+      "description": "Creating custom websites and brand identities for local businesses.",
+      "services": ["Web Design", "SEO", "Branding"]
+    },
+    {
+      "name": "Greenway Outdoors & Sporting",
+      "address": "88 Trailhead Lane, Murfreesboro, TN 37128",
+      "phone": "(615) 555-7789",
+      "website": "https://greenwayoutdoors.com",
+      "image": "images/members/greenway.jpg",
+      "membership": 1,
+      "description": "Local supplier of outdoor gear, bikes, and trail equipment.",
+      "services": ["Bike Rentals", "Hiking Gear", "Workshops"]
+    }
+  ]
+}
