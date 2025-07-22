@@ -17,9 +17,47 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://Anna-Thurston.github.io/wdd231/chamber/images/social-preview.png"/>
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Murfreesboro Chamber of Commerce" />
+
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
 </head>
+
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Murfreesboro Chamber of Commerce logo" />
+      <h1>Murfreesboro Chamber of Commerce</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content goes here -->
+  <main>
+    <!-- Page-specific content will be inserted here -->
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
+    <!-- <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p> -->
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- JavaScript for dynamic year and last modified -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+
