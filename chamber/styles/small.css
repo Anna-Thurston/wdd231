@@ -1,3 +1,5 @@
+/* small.css - Mobile First */
+
 :root {
   --primary-color: #1a1a1a;
   --accent-color: #ffffff;
@@ -5,4 +7,130 @@
   --text-color: #333333;
   --nav-bg: #2d2d2d;
   --hover-bg: #444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 1rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+nav {
+  background-color: var(--nav-bg);
+}
+
+#menu-toggle {
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+  display: block;
+  cursor: pointer;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+}
+
+.navigation li {
+  list-style: none;
+}
+
+.navigation a {
+  display: block;
+  color: white;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Show menu on toggle */
+#menu-toggle.active + .navigation,
+.navigation.show {
+  display: flex;
+}
+
+/* Directory Section */
+#directory {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-view {
+  grid-template-columns: 1fr;
+}
+
+.list-view {
+  display: block;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+/* footer {
+  background-color: #003366;
+  color: white;
+  padding: 2rem 1rem;
+} */
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact-info, .developer-info {
+    flex: 1;
+  }
 }
