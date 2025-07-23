@@ -58,3 +58,17 @@ listButton.addEventListener("click", () => {
 });
 
 getMemberData();
+
+// Footer date handling
+const yearSpan = document.getElementById("year");
+const lastModifiedSpan = document.getElementById("lastModified");
+
+if (yearSpan && lastModifiedSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+    const lastModified = new Date(document.lastModified);
+    lastModifiedSpan.textContent = lastModified.toLocaleString("en-US", {
+        dateStyle: "long",
+        timeStyle: "short"
+    });
+}
+
