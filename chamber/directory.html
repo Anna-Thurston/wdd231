@@ -1,8 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Page Info -->
   <title>Business Directory | Murfreesboro Chamber of Commerce</title>
   <meta name="description" content="Explore local businesses in the Murfreesboro Chamber of Commerce directory. Connect with gold, silver, and standard members to grow your network." />
   <meta name="author" content="Anna Thurston" />
@@ -10,7 +11,7 @@
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" />
 
-  <!-- Facebook Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Murfreesboro Chamber of Commerce Directory" />
   <meta property="og:description" content="Discover and connect with local businesses through our official chamber directory." />
   <meta property="og:url" content="https://Anna-Thurston.github.io/wdd231/chamber/directory.html" />
@@ -19,8 +20,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Murfreesboro Chamber of Commerce" />
 
-
-  <!-- CSS Files -->
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
@@ -29,13 +29,14 @@
 <body>
   <header>
     <div class="logo-title">
-      <img src="images/logo.png" alt="Murfreesboro Chamber of Commerce logo" />
+      <img src="images/logo.png" alt="Murfreesboro Chamber of Commerce logo" class="logo" />
       <h1>Murfreesboro Chamber of Commerce</h1>
     </div>
   </header>
 
   <nav>
-    <ul class="navigation">
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul class="navigation" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>
@@ -43,33 +44,36 @@
     </ul>
   </nav>
 
-  <!-- Main content goes here -->
   <main>
-    <!-- Page-specific content will be inserted here -->
+    <h1>Business Directory</h1>
+  <section class="directory-controls">
+    <button id="grid">Grid View</button>
+    <button id="list">List View</button>
+  </section>
+  <section id="members" class="grid"></section>
   </main>
 
-<footer>
-  <div class="footer-content">
-    <div class="contact-info">
-      <p><strong>Contact:</strong></p>
-      <p>📍 Murfreesboro Chamber of Commerce<br>123 Main Street, Murfreesboro, TN</p>
-      <p>📞 (615) 555-1234</p>
-      <p>✉️ info@murfreesborochamber.org</p>
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <p><strong>Contact:</strong></p>
+        <p>📍 Murfreesboro Chamber of Commerce<br>123 Main Street, Murfreesboro, TN</p>
+        <p>📞 (615) 000-0000</p>
+        <p>✉️ info@murfreesborochamber.org</p>
+      </div>
+      <div class="developer-info">
+        <p>Anna Thurston | WDD 231</p>
+        <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
     </div>
+  </footer>
 
-    <div class="developer-info">
-      <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
-      <p>Anna Thurston | WDD 231</p>
-      <p>Last Modified: <span id="lastModified"></span></p>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Populate dynamic year and last modified date
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = document.lastModified;
-</script>
-
+  <script src="scripts/directory.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
 </body>
 
+</html>
