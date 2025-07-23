@@ -1,4 +1,4 @@
-/* small.css - Mobile First */
+small.css - Mobile First
 
 :root {
     --primary-color: #1a1a1a;
@@ -26,6 +26,7 @@ body {
     background-color: var(--accent-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 header {
