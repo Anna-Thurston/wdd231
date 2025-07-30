@@ -83,6 +83,94 @@ nav {
     display: flex;
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--hover-bg);
+}
+
+/* About Section */
+.about,
+.invitation,
+.highlights {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.about h2,
+.invitation h2,
+.highlights h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Highlights (Events and Member Spotlight) */
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.highlight {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.highlight h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Invitation Section */
+.invitation ul {
+    list-style-type: '✔ ';
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.invitation ul li {
+    margin-bottom: 0.5rem;
+}
+
 /* Directory View */
 #members.grid {
     display: grid;
@@ -128,6 +216,15 @@ nav {
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
 }
+
+.weather {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
 
 /* Footer */
 footer {

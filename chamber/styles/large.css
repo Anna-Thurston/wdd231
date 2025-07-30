@@ -19,4 +19,55 @@
   .member-card {
     flex: 1 1 30%;
   }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .highlights {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .highlight {
+    flex: 1;
+    margin: 0 0.5rem;
+  }
+
+  .invitation ul {
+    columns: 2;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .hero img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .about,
+  .invitation,
+  .highlights {
+    padding: 2rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+  }
 }
