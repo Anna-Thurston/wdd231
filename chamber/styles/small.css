@@ -29,6 +29,11 @@ body {
     overflow-x: hidden;
 }
 
+main > section {
+  padding: 2rem;
+}
+
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
@@ -71,6 +76,11 @@ nav {
     color: white;
     padding: 0.75rem;
     text-decoration: none;
+}
+
+.navigation a.active {
+  background-color: var(--hover-bg);
+  font-weight: bold;
 }
 
 .navigation a:hover {
