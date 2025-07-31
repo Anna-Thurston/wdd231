@@ -67,6 +67,10 @@ nav {
     flex-direction: column;
 }
 
+.navigation.open {
+  display: flex;
+}
+
 .navigation li {
     list-style: none;
 }
@@ -87,10 +91,18 @@ nav {
     background-color: var(--hover-bg);
 }
 
+.navigation.open {
+  display: flex;
+}
+
 /* Show menu on toggle */
 #menu-toggle.active + .navigation,
 .navigation.show {
     display: flex;
+}
+
+#menu-toggle.open::after {
+  content: "✖";
 }
 
 /* Hero Section */
