@@ -1,38 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You</title>
-    <link rel="stylesheet" href="styles/thankyou.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - Murfreesboro Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* Styling for submitted data display */
+    .submitted-info {
+      background-color: var(--secondary-color, #f9f9f9);
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color, #333);
+    }
+
+    .submitted-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .submitted-info dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 0.75rem 1.5rem;
+      align-items: start;
+    }
+
+    .submitted-info dt {
+      font-weight: 700;
+      color: var(--primary-color, #1a1a1a);
+    }
+
+    .submitted-info dd {
+      margin: 0;
+      word-break: break-word;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Thank You!</h1>
-        <nav>
-        <!-- nav menu -->
-        </nav>
-    </header>
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Murfreesboro Chamber of Commerce logo" class="logo" />
+      <p>Murfreesboro Chamber of Commerce</p>
+    </div>
+  </header>
 
-    <main>
-        <h2>Your application was submitted.</h2>
-        <div id="confirmation"></div>
-    </main>
+  <nav>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul class="navigation" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
 
-    <footer>
-        <p>&copy; 2025 Chamber of Commerce</p>
-    </footer>
+  <main>
+    <section class="thank-you-message" style="padding: 2rem; text-align: center;">
+      <h1>Thank You for Joining the Murfreesboro Chamber!</h1>
+      <p>We appreciate you taking the time to complete the membership application.</p>
+      <p>Our team will review your submission and get back to you shortly.</p>
+      <p>In the meantime, feel free to explore our <a href="discover.html">Discover</a> page or check out the <a href="directory.html">Directory</a> of members.</p>
+      <a href="index.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Back to Home</a>
+    </section>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        document.getElementById("confirmation").innerHTML = `
-        <p><strong>First Name:</strong> ${params.get("firstName")}</p>
-        <p><strong>Last Name:</strong> ${params.get("lastName")}</p>
-        <p><strong>Email:</strong> ${params.get("email")}</p>
-        <p><strong>Phone:</strong> ${params.get("phone")}</p>
-        <p><strong>Organization:</strong> ${params.get("organization")}</p>
-        <p><strong>Submitted On:</strong> ${params.get("timestamp")}</p>
-        `;
-    </script>
+    <!-- Submitted info display -->
+    <section class="submitted-info" aria-labelledby="submitted-info-heading" tabindex="0">
+      <h2 id="submitted-info-heading">Your Submitted Information</h2>
+      <dl>
+        <div>
+          <dt>First Name:</dt>
+          <dd id="fname">Loading...</dd>
+        </div>
+        <div>
+          <dt>Last Name:</dt>
+          <dd id="lname">Loading...</dd>
+        </div>
+        <div>
+          <dt>Email:</dt>
+          <dd id="email">Loading...</dd>
+        </div>
+        <div>
+          <dt>Mobile Number:</dt>
+          <dd id="phone">Loading...</dd>
+        </div>
+        <div>
+          <dt>Business Name:</dt>
+          <dd id="organization">Loading...</dd>
+        </div>
+        <div>
+          <dt>Submission Date:</dt>
+          <dd id="timestamp">Loading...</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <p>Murfreesboro Chamber of Commerce<br />123 Main Street, Murfreesboro, TN</p>
+        <p>info@murfreesborochamber.org</p>
+        <p>(615) 000-0000</p>
+      </div>
+      <div class="developer-info">
+        <p>Anna Thurston | WDD 231</p>
+        <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation toggle (same as join.html)
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      this.classList.toggle("active");
+      document.getElementById("nav-menu").classList.toggle("open");
+    });
+
+    // Update footer year and last modified
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Populate submitted fields from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const fields = {
+      fname: "First Name",
+      lname: "Last Name",
+      email: "Email",
+      phone: "Mobile Number",
+      organization: "Business Name",
+      timestamp: "Submission Date"
+    };
+
+    for (const id in fields) {
+      const element = document.getElementById(id);
+      let value = params.get(id);
+      if (value) {
+        if (id === "timestamp") {
+          // Format ISO timestamp to readable format
+          value = new Date(value).toLocaleString();
+        }
+        element.textContent = value;
+      } else {
+        element.textContent = "Not provided";
+      }
+    }
+  </script>
 </body>
 </html>

@@ -42,7 +42,45 @@
     columns: 2;
     column-gap: 2rem;
   }
+
+  .join-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .join {
+    flex: 2 1 60%;
+  }
+
+  form .form-group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  form label {
+    font-size: 0.95rem;
+  }
+
+  input[type="submit"] {
+    grid-column: span 2;
+    justify-self: start;
+  }
+
+  .membership-cards {
+    flex: 1 1 35%;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
 }
+
+
 
 @media screen and (min-width: 1024px) {
   .hero {
