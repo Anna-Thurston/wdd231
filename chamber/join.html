@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apply to join the Murfreesboro Chamber of Commerce and enjoy valuable business membership benefits.">
+  <meta name="author" content="Anna Thurston">
   <title>Join - Murfreesboro Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Join the Murfreesboro Chamber of Commerce" />
+  <meta property="og:description" content="Become a member of the Murfreesboro Chamber and connect your business with our thriving community." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://Anna-Thurston.github.io/wdd231/chamber/join.html" />
 </head>
-
+<script src="scripts/form.js"></script>
 <body>
   <header>
     <div class="logo-title">
@@ -30,7 +37,7 @@
 <main class="join-layout">
  <!-- FORM -->
 <section class="join">
-  <h1>Join the Chamber of Commerce</h1>
+  <h1>Join - Murfreesboro Chamber of Commerce</h1>
   <form action="thankyou.html" method="get">
   <div class="form-group">
     <label>
@@ -115,7 +122,7 @@
       <div class="card animate">
         <h3>Gold</h3>
         <p>$500/year – Premium visibility & benefits</p>
-        <a href="#goldModal" class="benefits-link">Learn More</a>
+        <a href="#gold-modal" class="benefits-link">Learn More</a>
       </div>
     </div>
   </section>
@@ -195,9 +202,9 @@
 </div>
 
 <!-- Gold Modal -->
-<div class="modal" id="goldModal">
+<div class="modal" id="gold-modal">
   <div class="modal-content">
-    <span class="close" data-close="goldModal">&times;</span>
+    <span class="close" data-close="gold-modal">&times;</span>
     <h3>Gold Benefits</h3>
     <ul>
       <li>All Silver benefits</li>
@@ -208,56 +215,7 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  // Populate hidden timestamp field
-  const timestamp = document.getElementById("timestamp");
-  if (timestamp) {
-    timestamp.value = new Date().toISOString();
-  }
 
-  // Navigation toggle with aria-expanded toggle for accessibility
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  menuToggle.addEventListener("click", function () {
-    const expanded = this.getAttribute("aria-expanded") === "true" || false;
-    this.setAttribute("aria-expanded", !expanded);
-    this.classList.toggle("active");
-    navMenu.classList.toggle("open");
-  });
-
-  // Update footer year and last modified
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = document.lastModified;
-
-  // Modal open
-  document.querySelectorAll(".benefits-link").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const modalId = link.getAttribute("href").substring(1);
-      const modal = document.getElementById(modalId);
-      if (modal) modal.style.display = "flex";
-    });
-  });
-
-  // Modal close buttons
-  document.querySelectorAll(".close").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const modalId = btn.getAttribute("data-close");
-      const modal = document.getElementById(modalId);
-      if (modal) modal.style.display = "none";
-    });
-  });
-
-  // Close modal on clicking outside content
-  window.addEventListener("click", e => {
-    if (e.target.classList.contains("modal")) {
-      e.target.style.display = "none";
-    }
-  });
-});
-</script>
 
 </body>
 </html>
