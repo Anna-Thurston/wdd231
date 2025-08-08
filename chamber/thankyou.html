@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Thank you for applying to join the Murfreesboro Chamber of Commerce and enjoy valuable business membership benefits.">
-  <meta name="author" content="Anna Thurston">
+  <meta name="description" content="Thank you for applying to join the Murfreesboro Chamber of Commerce and enjoy valuable business membership benefits." />
+  <meta name="author" content="Anna Thurston" />
   <title>Thank You - Murfreesboro Chamber of Commerce</title>
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
@@ -46,9 +46,34 @@
       margin: 0;
       word-break: break-word;
     }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .thank-you-message {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .thank-you-message a.cta-button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .thank-you-message a.cta-button:hover {
+      background-color: var(--hover-bg);
+    }
   </style>
 </head>
-
 <body>
   <header>
     <div class="logo-title">
@@ -58,25 +83,24 @@
   </header>
 
   <nav>
-    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
     <ul class="navigation" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
+      <li><a href="join.html" class="active">Join</a></li>
     </ul>
   </nav>
 
   <main>
-    <section class="thank-you-message" style="padding: 2rem; text-align: center;">
+    <section class="thank-you-message" tabindex="0" aria-live="polite">
       <h1>Thank You for Joining the Murfreesboro Chamber!</h1>
       <p>We appreciate you taking the time to complete the membership application.</p>
       <p>Our team will review your submission and get back to you shortly.</p>
       <p>In the meantime, feel free to explore our <a href="discover.html">Discover</a> page or check out the <a href="directory.html">Directory</a> of members.</p>
-      <a href="index.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Back to Home</a>
+      <a href="index.html" class="cta-button">Back to Home</a>
     </section>
 
-    <!-- Submitted info display -->
     <section class="submitted-info" aria-labelledby="submitted-info-heading" tabindex="0">
       <h2 id="submitted-info-heading">Your Submitted Information</h2>
       <dl>
@@ -124,10 +148,14 @@
   </footer>
 
   <script>
-    // Navigation toggle (same as join.html)
-    document.getElementById("menu-toggle").addEventListener("click", function () {
+    // Navigation toggle with aria-expanded update
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    menuToggle.addEventListener("click", function () {
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", !expanded);
       this.classList.toggle("active");
-      document.getElementById("nav-menu").classList.toggle("open");
+      navMenu.classList.toggle("open");
     });
 
     // Update footer year and last modified
@@ -150,7 +178,6 @@
       let value = params.get(id);
       if (value) {
         if (id === "timestamp") {
-          // Format ISO timestamp to readable format
           value = new Date(value).toLocaleString();
         }
         element.textContent = value;

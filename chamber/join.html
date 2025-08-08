@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Apply to join the Murfreesboro Chamber of Commerce and enjoy valuable business membership benefits.">
-  <meta name="author" content="Anna Thurston">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Join - Murfreesboro Chamber of Commerce</title>
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Apply to join the Murfreesboro Chamber of Commerce and enjoy valuable business membership benefits." />
+  <meta name="author" content="Anna Thurston" />
   <meta property="og:title" content="Join the Murfreesboro Chamber of Commerce" />
   <meta property="og:description" content="Become a member of the Murfreesboro Chamber and connect your business with our thriving community." />
   <meta property="og:image" content="https://Anna-Thurston.github.io/wdd231/chamber/images/social-preview.png" />
   <meta property="og:url" content="https://Anna-Thurston.github.io/wdd231/chamber/join.html" />
-  <script src="scripts/form.js"></script>
+  <script src="scripts/join.js" defer></script>
 </head>
 <body>
   <header>
@@ -25,7 +25,7 @@
   </header>
 
   <nav>
-    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
     <ul class="navigation" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
@@ -34,188 +34,145 @@
     </ul>
   </nav>
 
-<main class="join-layout">
- <!-- FORM -->
-<section class="join">
-  <h1>Join - Murfreesboro Chamber of Commerce</h1>
-  <form action="thankyou.html" method="get">
-  <div class="form-group">
-    <label>
-      First Name:
-      <input type="text" name="fname" required />
-    </label>
+  <main class="join-layout">
+    <section class="join">
+      <h1>Join - Murfreesboro Chamber of Commerce</h1>
+      <form action="thankyou.html" method="get">
+        <div class="form-group">
+          <label>
+            First Name:
+            <input type="text" name="fname" required autocomplete="given-name" />
+          </label>
+          <label>
+            Last Name:
+            <input type="text" name="lname" required autocomplete="family-name" />
+          </label>
+          <label>
+            Organizational Title:
+            <input type="text" name="orgtitle" pattern="^[A-Za-z0-9 .,'-]{0,50}$" placeholder="e.g. Marketing Director" autocomplete="organization-title" />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+          </label>
+          <label>
+            Mobile Phone:
+            <input type="tel" name="phone" placeholder="+1 (555) 123-4567" autocomplete="tel" required />
+          </label>
+          <label>
+            Organization Name:
+            <input type="text" name="organization" required autocomplete="organization" />
+          </label>
+          <label>
+            Membership Level:
+            <select name="membership" required autocomplete="off">
+              <option value="">--Select--</option>
+              <option value="np">Non-Profit</option>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+            </select>
+          </label>
+          <label>
+            Description:
+            <textarea name="description" autocomplete="off" required></textarea>
+          </label>
+        </div>
+        <input type="hidden" id="timestamp" name="timestamp" />
+        <input type="submit" value="Submit Membership Application" />
+      </form>
+    </section>
 
-    <label>
-      Last Name:
-      <input type="text" name="lname" required />
-    </label>
-
-    <label>
-      Organizational Title:
-      <input type="text" name="orgtitle" />
-    </label>
-
-    <label>
-      Email:
-      <input type="email" name="email" required />
-    </label>
-
-    <label>
-      Mobile Phone:
-      <input type="tel" name="phone" required />
-    </label>
-
-    <label>
-      Organization Name:
-      <input type="text" name="organization" required />
-    </label>
-
-    <label>
-      Membership Level:
-      <select name="membership" required>
-        <option value="">--Select--</option>
-        <option value="np">Non-Profit</option>
-        <option value="bronze">Bronze</option>
-        <option value="silver">Silver</option>
-        <option value="gold">Gold</option>
-      </select>
-    </label>
-
-    <label>
-      Description:
-      <textarea name="description"></textarea>
-    </label>
-  </div>
-
-  <input type="hidden" id="timestamp" name="timestamp" />
-  <input type="submit" value="Submit Membership Application" />
-</form>
-
-</section>
-
-  <!-- MEMBERSHIP CARDS -->
-  <section class="membership-cards">
-    <h2>Membership Levels</h2>
-    <div class="cards-container">
-      <!-- Non-Profit -->
-      <div class="card animate">
-        <h3>Non-Profit</h3>
-        <p>Free for qualifying 501(c)(3) organizations</p>
-        <a href="#np-modal" class="benefits-link">Learn More</a>
+    <section class="membership-cards">
+      <h2>Membership Levels</h2>
+      <div class="cards-container">
+        <div class="card animate">
+          <h3>Non-Profit</h3>
+          <p>Free for qualifying 501(c)(3) organizations</p>
+          <a href="#np-modal" class="benefits-link">Learn More</a>
+        </div>
+        <div class="card animate">
+          <h3>Bronze</h3>
+          <p>$100/year – Great for small businesses</p>
+          <a href="#bronze-modal" class="benefits-link">Learn More</a>
+        </div>
+        <div class="card animate">
+          <h3>Silver</h3>
+          <p>$250/year – Adds extra exposure & perks</p>
+          <a href="#silver-modal" class="benefits-link">Learn More</a>
+        </div>
+        <div class="card animate">
+          <h3>Gold</h3>
+          <p>$500/year – Premium visibility & benefits</p>
+          <a href="#gold-modal" class="benefits-link">Learn More</a>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Bronze -->
-      <div class="card animate">
-        <h3>Bronze</h3>
-        <p>$100/year – Great for small businesses</p>
-        <a href="#bronze-modal" class="benefits-link">Learn More</a>
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <p>Murfreesboro Chamber of Commerce<br />123 Main Street, Murfreesboro, TN</p>
+        <p>info@murfreesborochamber.org</p>
+        <p>(615) 000-0000</p>
       </div>
-
-      <!-- Silver -->
-      <div class="card animate">
-        <h3>Silver</h3>
-        <p>$250/year – Adds extra exposure & perks</p>
-        <a href="#silver-modal" class="benefits-link">Learn More</a>
-      </div>
-
-      <!-- Gold -->
-      <div class="card animate">
-        <h3>Gold</h3>
-        <p>$500/year – Premium visibility & benefits</p>
-        <a href="#gold-modal" class="benefits-link">Learn More</a>
+      <div class="developer-info">
+        <p>Anna Thurston | WDD 231</p>
+        <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-    <footer>
-        <div class="footer-content">
-        <div class="contact-info">
-            <p>Murfreesboro Chamber of Commerce<br />123 Main Street, Murfreesboro, TN</p>
-            <p>info@murfreesborochamber.org</p>
-            <p>(615) 000-0000</p>
-        </div>
-        <div class="developer-info">
-            <p>Anna Thurston | WDD 231</p>
-            <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </div>
-        </div>
-    </footer>
-
-    <script>
-        // Populate hidden timestamp field
-        document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("timestamp").value = new Date().toISOString();
-        });
-
-        // Navigation toggle
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-        this.classList.toggle("active");
-        document.getElementById("nav-menu").classList.toggle("open");
-        });
-
-        // Update footer year and last modified
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
-    <!-- Non-Profit Modal -->
-<div class="modal" id="np-modal">
-  <div class="modal-content">
-    <span class="close" data-close="np-modal">&times;</span>
-    <h3>Non-Profit Benefits</h3>
-    <ul>
-      <li>Free membership</li>
-      <li>Access to community events</li>
-      <li>Monthly newsletter</li>
-      <li>Basic listing in member directory</li>
-    </ul>
+  <!-- Modals -->
+  <div class="modal" id="np-modal" aria-hidden="true" role="dialog" aria-labelledby="np-title" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" data-close="np-modal" aria-label="Close">&times;</button>
+      <h3 id="np-title">Non-Profit Benefits</h3>
+      <ul>
+        <li>Free membership</li>
+        <li>Access to community events</li>
+        <li>Monthly newsletter</li>
+        <li>Basic listing in member directory</li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<!-- Bronze Modal -->
-<div class="modal" id="bronze-modal">
-  <div class="modal-content">
-    <span class="close" data-close="bronze-modal">&times;</span>
-    <h3>Bronze Benefits</h3>
-    <ul>
-      <li>All Non-Profit benefits</li>
-      <li>Event discounts</li>
-      <li>Networking mixers</li>
-      <li>Directory listing with logo</li>
-    </ul>
+  <div class="modal" id="bronze-modal" aria-hidden="true" role="dialog" aria-labelledby="bronze-title" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" data-close="bronze-modal" aria-label="Close">&times;</button>
+      <h3 id="bronze-title">Bronze Benefits</h3>
+      <ul>
+        <li>All Non-Profit benefits</li>
+        <li>Event discounts</li>
+        <li>Networking mixers</li>
+        <li>Directory listing with logo</li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<!-- Silver Modal -->
-<div class="modal" id="silver-modal">
-  <div class="modal-content">
-    <span class="close" data-close="silver-modal">&times;</span>
-    <h3>Silver Benefits</h3>
-    <ul>
-      <li>All Bronze benefits</li>
-      <li>Homepage spotlight (1x/year)</li>
-      <li>Promotional emails</li>
-      <li>Free business workshops</li>
-    </ul>
+  <div class="modal" id="silver-modal" aria-hidden="true" role="dialog" aria-labelledby="silver-title" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" data-close="silver-modal" aria-label="Close">&times;</button>
+      <h3 id="silver-title">Silver Benefits</h3>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Homepage spotlight (1x/year)</li>
+        <li>Promotional emails</li>
+        <li>Free business workshops</li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<!-- Gold Modal -->
-<div class="modal" id="gold-modal">
-  <div class="modal-content">
-    <span class="close" data-close="gold-modal">&times;</span>
-    <h3>Gold Benefits</h3>
-    <ul>
-      <li>All Silver benefits</li>
-      <li>Unlimited homepage spotlights</li>
-      <li>Priority expo booth space</li>
-      <li>Custom ad opportunities</li>
-    </ul>
+  <div class="modal" id="gold-modal" aria-hidden="true" role="dialog" aria-labelledby="gold-title" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" data-close="gold-modal" aria-label="Close">&times;</button>
+      <h3 id="gold-title">Gold Benefits</h3>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Unlimited homepage spotlights</li>
+        <li>Priority expo booth space</li>
+        <li>Custom ad opportunities</li>
+      </ul>
+    </div>
   </div>
-</div>
-
-
-
 </body>
 </html>

@@ -9,9 +9,11 @@
     display: none;
   }
 
+  /* Limit max width and center with padding */
   header, nav, main {
-    max-width: 1200px;
+    /* max-width: 1100px; */
     margin: 0 auto;
+    padding: 0 1rem;
   }
 }
 
@@ -48,6 +50,10 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 2rem;
+
+    max-width: 1100px;  /* constrain width */
+    margin: 0 auto;
+    padding: 1rem;      /* balanced padding around */
   }
 
   .join {
@@ -73,14 +79,13 @@
     background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: 8px;
+    max-width: 400px;  /* limit width of cards section */
   }
 
   .cards-container {
     flex-direction: column;
   }
 }
-
-
 
 @media screen and (min-width: 1024px) {
   .hero {
