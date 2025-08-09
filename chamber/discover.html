@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murfreesboro Chamber of Commerce | Discover</title>
+    <meta name="description" content="Discover Murfreesboro – Learn about our demographics, attractions, and community features." />
+    <meta name="author" content="Anna Thurston" />
+
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:title" content="Discover Murfreesboro" />
+    <meta property="og:description" content="Explore the history, attractions, and vibrant community of Murfreesboro." />
+    <meta property="og:url" content="https://Anna-Thurston.github.io/wdd231/chamber/discover.html" />
+    <meta property="og:image" content="https://Anna-Thurston.github.io/wdd231/chamber/images/social-preview.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Murfreesboro Chamber of Commerce" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="images/logo.png" alt="Murfreesboro Chamber of Commerce logo" class="logo" />
+            <p>Murfreesboro Chamber of Commerce</p>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <ul class="navigation" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <aside id="visit-message" class="visit-message"></aside>
+    <main class="discover-grid" id="discover-grid">
+        <section class="card battlefield"></section>
+        <section class="card mansion"></section>
+        <section class="card arts"></section>
+        <section class="card fountains"></section>
+        <section class="card greenway"></section>
+        <section class="card mtsu"></section>
+        <section class="card cannonsburgh"></section>
+        <section class="card downtown"></section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Murfreesboro Chamber of Commerce<br>123 Main Street, Murfreesboro, TN</p>
+                <p>info@murfreesborochamber.org</p>
+                <p>(615) 000-0000</p>
+            </div>
+            <div class="developer-info">
+                <p>Anna Thurston | WDD 231</p>
+                <p>&copy; <span id="year"></span> Murfreesboro Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/discover.js" defer></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>

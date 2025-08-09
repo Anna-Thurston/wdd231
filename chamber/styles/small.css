@@ -30,7 +30,12 @@ body {
 }
 
 main > section {
-  padding: 2rem;
+  padding: 2rem; /* original padding */
+}
+
+/* UPDATED: Smaller padding for discover cards */
+main.discover-grid > section {
+  padding: 1rem;
 }
 
 h1, h2, h3 {
@@ -277,6 +282,8 @@ form select {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text & images */
+    margin: 0;          /* Remove margin */
 }
 
 /* Animations */
@@ -347,6 +354,7 @@ footer {
 .thank-you-message {
   font-size: 1rem;
 }
+
 /* Styling for submitted data display */
 .submitted-info {
     background-color: var(--secondary-color, #f9f9f9);
@@ -389,22 +397,44 @@ main {
     margin: 0 auto;
 }
 
-.thank-you-message {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.thank-you-message a.cta-button {
-    margin-top: 1rem;
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--accent-color);
+/* Center and reduce whitespace on discover grid */
+.discover-grid {
+    display: grid;
+    gap: 0.75rem;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "battlefield"
+      "mansion"
+      "arts"
+      "fountains"
+      "greenway"
+      "mtsu"
+      "cannonsburgh"
+      "downtown";
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.thank-you-message a.cta-button:hover {
-    background-color: var(--hover-bg);
+/* Assign each card to its grid area */
+.battlefield   { grid-area: battlefield; }
+.mansion       { grid-area: mansion; }
+.arts          { grid-area: arts; }
+.fountains     { grid-area: fountains; }
+.greenway      { grid-area: greenway; }
+.mtsu          { grid-area: mtsu; }
+.cannonsburgh  { grid-area: cannonsburgh; }
+.downtown      { grid-area: downtown; }
+
+/* Sidebar visit message */
+.visit-message {
+  background-color: #f0f4f8;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #333;
 }

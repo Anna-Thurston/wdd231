@@ -1,0 +1,58 @@
+[
+  {
+    "className": "battlefield",
+    "name": "Stones River National Battlefield",
+    "address": "3501 Old Nashville Hwy, Murfreesboro, TN 37129",
+    "description": "A historic Civil War battlefield and national park offering tours and educational programs.",
+    "image": "images/battlefield.webp"
+  },
+  {
+    "className": "mansion",
+    "name": "Oaklands Mansion",
+    "address": "900 N Maney Ave, Murfreesboro, TN 37130",
+    "description": "A historic plantation home turned museum showcasing 19th-century life in Tennessee.",
+    "image": "images/mansion.webp"
+  },
+  {
+    "className": "arts",
+    "name": "The Center for the Arts",
+    "address": "110 W College St, Murfreesboro, TN 37130",
+    "description": "A vibrant venue for performing arts, exhibitions, and community events.",
+    "image": "images/arts.webp"
+  },
+  {
+    "className": "fountains",
+    "name": "Fountains at Gateway",
+    "address": "300 Gateway Blvd, Murfreesboro, TN 37129",
+    "description": "A popular shopping and entertainment district with fountains, dining, and retail.",
+    "image": "images/fountains.webp"
+  },
+  {
+    "className": "greenway",
+    "name": "Greenway Trail System",
+    "address": "Multiple access points throughout Murfreesboro, TN",
+    "description": "Scenic walking and biking trails connecting parks and neighborhoods across the city.",
+    "image": "images/greenway.webp"
+  },
+  {
+    "className": "mtsu",
+    "name": "Middle Tennessee State University",
+    "address": "1301 E Main St, Murfreesboro, TN 37132",
+    "description": "A large public university known for its research programs and diverse student community.",
+    "image": "images/mtsu.webp"
+  },
+  {
+    "className": "cannonsburgh",
+    "name": "Cannonsburgh Village",
+    "address": "312 Cannonsburgh Village Dr, Murfreesboro, TN 37129",
+    "description": "A recreated 19th-century village offering historical buildings, crafts, and events.",
+    "image": "images/cannonsburgh.webp"
+  },
+  {
+    "className": "downtown",
+    "name": "Murfreesboro Downtown Square",
+    "address": "Main St & Public Square, Murfreesboro, TN 37130",
+    "description": "The historic heart of the city with shops, restaurants, and regular community events.",
+    "image": "images/downtown.webp"
+  }
+]

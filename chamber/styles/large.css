@@ -9,11 +9,21 @@
     display: none;
   }
 
-  /* Limit max width and center with padding */
   header, nav, main {
-    /* max-width: 1100px; */
     margin: 0 auto;
     padding: 0 1rem;
+  }
+
+  /* Add smooth transitions to images */
+  .discover-grid .card figure img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  /* Hover effect only for screens 641px and wider */
+  .discover-grid .card figure img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
@@ -85,6 +95,15 @@
   .cards-container {
     flex-direction: column;
   }
+
+  .discover-grid {
+    grid-template-areas:
+        "battlefield mansion"
+        "arts fountains"
+        "greenway mtsu"
+        "cannonsburgh downtown";
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -112,5 +131,13 @@
   .cta-button {
     font-size: 1.1rem;
     padding: 0.75rem 1.5rem;
+  }
+
+  .discover-grid {
+    grid-template-areas:
+        "battlefield mansion arts"
+        "fountains greenway mtsu"
+        "cannonsburgh downtown downtown";
+    grid-template-columns: repeat(3, 1fr);
   }
 }
