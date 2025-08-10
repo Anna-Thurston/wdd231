@@ -25,6 +25,61 @@
     transform: scale(1.05);
     cursor: pointer;
   }
+
+  .discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* image | text */
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Make Learn More button span full card width */
+  .card button {
+    grid-column: 1 / -1; /* spans both columns */
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 20px;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    text-align: center;
+    border: none;
+  }
+
+  .card figure {
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+  }
+
+  .card figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card h3,
+  .card p {
+    grid-column: 2 / 3;
+  }
+
+  .card a {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -95,15 +150,6 @@
   .cards-container {
     flex-direction: column;
   }
-
-  .discover-grid {
-    grid-template-areas:
-        "battlefield mansion"
-        "arts fountains"
-        "greenway mtsu"
-        "cannonsburgh downtown";
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -135,9 +181,11 @@
 
   .discover-grid {
     grid-template-areas:
-        "battlefield mansion arts"
-        "fountains greenway mtsu"
-        "cannonsburgh downtown downtown";
-    grid-template-columns: repeat(3, 1fr);
+        "battlefield mansion"
+        "arts fountains"
+        "greenway mtsu"
+        "cannonsburgh downtown";
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
   }
 }
