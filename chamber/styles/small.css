@@ -42,6 +42,12 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
+.discover {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 header {
     background-color: var(--primary-color);
     color: var(--accent-color);
