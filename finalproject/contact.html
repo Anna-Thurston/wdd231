@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Music with Annie</title>
+  <meta name="description" content="Contact form for Music with Annie. Reach out to schedule lessons or ask questions." />
+  <meta name="author" content="Anna Thurston" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="site-title">Music with Annie</div>
+    <nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
+        <div></div><div></div><div></div>
+      </button>
+      <ul id="primary-navigation" role="menu">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="lessons.html" role="menuitem">Lessons</a></li>
+        <li role="none"><a href="testimonials.html" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="contact.html" role="menuitem" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Music with Annie</h1>
+    <form id="contact-form" action="formaction.html" method="GET" novalidate>
+      <label for="fname">First Name *</label>
+      <input type="text" id="fname" name="fname" required autocomplete="given-name" />
+
+      <label for="lname">Last Name *</label>
+      <input type="text" id="lname" name="lname" required autocomplete="family-name" />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required autocomplete="email" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="^[0-9\s\-+()]*$" />
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Music with Annie | <a href="attributions.html" style="color: var(--gold);">Attributions</a></p>
+    <p><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" style="color: var(--gold);">Project Video Demo</a></p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
