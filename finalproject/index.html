@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music with Annie — Home</title>
+  <meta name="description" content="Welcome to Music with Annie - private lessons and early childhood music classes." />
+  <meta name="author" content="Anna Thurston" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Music with Annie" />
+  <meta property="og:description" content="Private music lessons and early childhood classes with Annie" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="images/logo.png" />
+</head>
+<body>
+  <header>
+    <div class="site-title">Music with Annie</div>
+    <nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <ul id="primary-navigation" role="menu">
+        <li role="none"><a href="index.html" role="menuitem" class="active">Home</a></li>
+        <li role="none"><a href="lessons.html" role="menuitem">Lessons</a></li>
+        <li role="none"><a href="testimonials.html" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-label="Hero">
+      <img src="images/hero-piano.jpg" alt="Annie playing piano with a student" width="900" height="400" loading="lazy" />
+      <h1>Welcome to Music with Annie</h1>
+      <p>Your journey to musical excellence begins here! Private lessons and early childhood music classes tailored just for you.</p>
+      <a href="lessons.html" class="btn" style="color: var(--gold); font-weight: bold;">Explore Lessons</a>
+    </section>
+
+    <section aria-label="Services Overview" class="cards">
+      <article class="card" tabindex="0">
+        <h3>Private Piano Lessons</h3>
+        <p>Personalized 30 or 45-minute sessions for all ages and skill levels.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Violin Lessons</h3>
+        <p>Learn technique and musicality in fun, engaging lessons.</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Early Childhood Music</h3>
+        <p>Interactive classes that foster musical curiosity in young children.</p>
+      </article>
+    </section>
+
+    <section aria-label="Testimonials" class="cards">
+      <article class="card" tabindex="0">
+        <h3>Mary J.</h3>
+        <p>"Annie is an amazing teacher! My daughter has blossomed musically."</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>John P.</h3>
+        <p>"Very professional and patient. Highly recommend for beginners."</p>
+      </article>
+      <article class="card" tabindex="0">
+        <h3>Lisa S.</h3>
+        <p>"Great environment and very encouraging!"</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Music with Annie | <a href="attributions.html" style="color: var(--gold);">Attributions</a></p>
+    <p><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" style="color: var(--gold);">Project Video Demo</a></p>
+  </footer>
+
+  <div id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-content" tabindex="0"></div>
+    <button id="modal-close" aria-label="Close modal">&times;</button>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
