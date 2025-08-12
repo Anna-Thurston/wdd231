@@ -1,0 +1,107 @@
+[
+  {
+    "id": "testimonial001",
+    "name": "Mary J.",
+    "feedback": "Annie is an amazing teacher! My daughter has blossomed musically.",
+    "rating": 5,
+    "date": "2023-11-05"
+  },
+  {
+    "id": "testimonial002",
+    "name": "John P.",
+    "feedback": "Very professional and patient. Highly recommend for beginners.",
+    "rating": 4,
+    "date": "2024-01-15"
+  },
+  {
+    "id": "testimonial003",
+    "name": "Lisa S.",
+    "feedback": "Great environment and very encouraging!",
+    "rating": 5,
+    "date": "2024-03-22"
+  },
+  {
+    "id": "testimonial004",
+    "name": "Mark T.",
+    "feedback": "The lessons are well structured and fun!",
+    "rating": 5,
+    "date": "2023-12-30"
+  },
+  {
+    "id": "testimonial005",
+    "name": "Samantha K.",
+    "feedback": "Annie makes learning music accessible and enjoyable.",
+    "rating": 5,
+    "date": "2024-02-10"
+  },
+  {
+    "id": "testimonial006",
+    "name": "James R.",
+    "feedback": "My son’s progress has been remarkable thanks to Annie’s teaching.",
+    "rating": 4,
+    "date": "2024-04-01"
+  },
+  {
+    "id": "testimonial007",
+    "name": "Olivia M.",
+    "feedback": "Highly recommend for any age or skill level.",
+    "rating": 5,
+    "date": "2023-11-18"
+  },
+  {
+    "id": "testimonial008",
+    "name": "Ethan B.",
+    "feedback": "Patient and supportive instructor, very professional.",
+    "rating": 4,
+    "date": "2023-10-25"
+  },
+  {
+    "id": "testimonial009",
+    "name": "Emily G.",
+    "feedback": "The early childhood classes are wonderful for kids.",
+    "rating": 5,
+    "date": "2024-03-01"
+  },
+  {
+    "id": "testimonial010",
+    "name": "Daniel F.",
+    "feedback": "My guitar skills improved quickly with Annie's lessons.",
+    "rating": 5,
+    "date": "2023-12-15"
+  },
+  {
+    "id": "testimonial011",
+    "name": "Hannah L.",
+    "feedback": "Excellent instruction with personalized attention.",
+    "rating": 5,
+    "date": "2024-01-22"
+  },
+  {
+    "id": "testimonial012",
+    "name": "Michael S.",
+    "feedback": "I appreciate the clear and encouraging teaching style.",
+    "rating": 4,
+    "date": "2024-02-28"
+  },
+  {
+    "id": "testimonial013",
+    "name": "Sophia W.",
+    "feedback": "Friendly atmosphere and excellent progress.",
+    "rating": 5,
+    "date": "2024-04-05"
+  },
+  {
+    "id": "testimonial014",
+    "name": "David C.",
+    "feedback": "Lessons are engaging and well paced.",
+    "rating": 4,
+    "date": "2023-11-12"
+  },
+  {
+    "id": "testimonial015",
+    "name": "Grace H.",
+    "feedback": "Annie is supportive and knowledgeable. Highly recommend!",
+    "rating": 5,
+    "date": "2024-03-15"
+  }
+]

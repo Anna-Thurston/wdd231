@@ -1,0 +1,122 @@
+[
+  {
+    "id": "lesson001",
+    "title": "Beginner Piano",
+    "instrument": "Piano",
+    "duration": "30 minutes",
+    "price": 30,
+    "description": "Great for new pianists ages 6 and up. Basic skills and music theory."
+  },
+  {
+    "id": "lesson002",
+    "title": "Intermediate Violin",
+    "instrument": "Violin",
+    "duration": "45 minutes",
+    "price": 45,
+    "description": "Focus on technique, posture, and repertoire development."
+  },
+  {
+    "id": "lesson003",
+    "title": "Early Childhood Music",
+    "instrument": "Group Class",
+    "duration": "60 minutes",
+    "price": 25,
+    "description": "Interactive music exploration for ages 3-5."
+  },
+  {
+    "id": "lesson004",
+    "title": "Advanced Piano",
+    "instrument": "Piano",
+    "duration": "60 minutes",
+    "price": 50,
+    "description": "Master advanced pieces and improve technical skills."
+  },
+  {
+    "id": "lesson005",
+    "title": "Beginner Guitar",
+    "instrument": "Guitar",
+    "duration": "30 minutes",
+    "price": 28,
+    "description": "Start your guitar journey with chords and rhythm basics."
+  },
+  {
+    "id": "lesson006",
+    "title": "Voice Lessons",
+    "instrument": "Voice",
+    "duration": "45 minutes",
+    "price": 40,
+    "description": "Improve vocal technique and breathing for all levels."
+  },
+  {
+    "id": "lesson007",
+    "title": "Music Theory 101",
+    "instrument": "Theory",
+    "duration": "30 minutes",
+    "price": 20,
+    "description": "Learn the fundamentals of music reading and composition."
+  },
+  {
+    "id": "lesson008",
+    "title": "Jazz Improvisation",
+    "instrument": "Piano",
+    "duration": "45 minutes",
+    "price": 45,
+    "description": "Explore jazz scales, chords, and creative playing."
+  },
+  {
+    "id": "lesson009",
+    "title": "Percussion Basics",
+    "instrument": "Drums",
+    "duration": "30 minutes",
+    "price": 30,
+    "description": "Learn rhythms and basic drumming techniques."
+  },
+  {
+    "id": "lesson010",
+    "title": "Flute for Beginners",
+    "instrument": "Flute",
+    "duration": "30 minutes",
+    "price": 28,
+    "description": "Start your flute playing with breathing and tone basics."
+  },
+  {
+    "id": "lesson011",
+    "title": "Cello Intermediate",
+    "instrument": "Cello",
+    "duration": "45 minutes",
+    "price": 40,
+    "description": "Develop tone, bowing, and sight-reading skills."
+  },
+  {
+    "id": "lesson012",
+    "title": "Songwriting Workshop",
+    "instrument": "Theory",
+    "duration": "60 minutes",
+    "price": 50,
+    "description": "Craft lyrics and melodies in a supportive setting."
+  },
+  {
+    "id": "lesson013",
+    "title": "Music Production Basics",
+    "instrument": "Production",
+    "duration": "60 minutes",
+    "price": 55,
+    "description": "Intro to digital music creation using popular software."
+  },
+  {
+    "id": "lesson014",
+    "title": "Advanced Violin",
+    "instrument": "Violin",
+    "duration": "60 minutes",
+    "price": 50,
+    "description": "Master technique and complex repertoire."
+  },
+  {
+    "id": "lesson015",
+    "title": "Beginner Ukulele",
+    "instrument": "Ukulele",
+    "duration": "30 minutes",
+    "price": 25,
+    "description": "Learn chords, strumming, and simple songs."
+  }
+]
