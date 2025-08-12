@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form Submission</title>
+  <meta name="description" content="Confirmation of contact form submission." />
+  <meta name="author" content="Anna Thurston" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="site-title">Music with Annie</div>
+    <nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
+        <div></div><div></div><div></div>
+      </button>
+      <ul id="primary-navigation" role="menu">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="lessons.html" role="menuitem">Lessons</a></li>
+        <li role="none"><a href="testimonials.html" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Thank You for Contacting Music with Annie!</h1>
+    <section>
+      <h2>Your Submitted Information:</h2>
+      <ul id="submitted-data"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Music with Annie | <a href="attributions.html" style="color: var(--gold);">Attributions</a></p>
+    <p><a href="https://youtu.be/YOUR_VIDEO_LINK" target="_blank" style="color: var(--gold);">Project Video Demo</a></p>
+  </footer>
+
+  <script>
+    // Parse URLSearchParams to display form data
+    const params = new URLSearchParams(window.location.search);
+    const dataList = document.getElementById('submitted-data');
+
+    if (params.toString() === '') {
+      dataList.innerHTML = '<li>No form data found.</li>';
+    } else {
+      for (const [key, value] of params.entries()) {
+        const li = document.createElement('li');
+        li.textContent = `${key.replace(/^\w/, c => c.toUpperCase())}: ${decodeURIComponent(value)}`;
+        dataList.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
