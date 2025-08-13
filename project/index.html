@@ -12,19 +12,17 @@
   <meta property="og:url" content="https://anna-thurston.github.io/wdd231/project/">
   <title>Music with Annie — Home</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/large.css">
-  <script src="scripts/schedule.js" defer></script>
+  <script type="module" src="scripts/schedule.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="Music with Annie home">
-        <img src="images/music-logo.webp" alt="Music logo" width="24" height="24" loading="lazy">
+        <img src="images/music-logo.webp" alt="" width="24" height="24" loading="lazy">
         <span>Music with Annie</span>
       </a>
       <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
@@ -39,7 +37,7 @@
   <main id="main">
     <section class="hero">
       <picture>
-        <img src="images/hero.webp" alt="Students learning music with Annie" loading="lazy">
+        <img src="images/hero.webp" alt="Students learning music with Annie" loading="lazy" width="1600" height="900">
       </picture>
       <div class="hero-text">
         <h1>Learn. Play. Grow.</h1>
@@ -48,21 +46,21 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="services container">
       <h2 class="section-title">Lessons & Classes</h2>
       <div id="lesson-cards" class="cards fade-list">
         <!-- schedule.js will inject limited lessons and the "View All Lessons" button -->
       </div>
     </section>
 
-    <section class="container">
+    <section class="upcoming-schedule container">
       <h2 class="section-title">Upcoming Sessions</h2>
       <div id="schedule-grid" class="cards fade-list">
         <!-- schedule.js will inject limited sessions here -->
       </div>
     </section>
 
-    <section class="container">
+    <section class="testimonials container">
       <h2 class="section-title">What Families Say</h2>
       <div id="testimonials-grid" class="cards testimonials-grid">
         <article class="quote">
