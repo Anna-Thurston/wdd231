@@ -6,11 +6,13 @@
   <title>Music with Annie — Thanks</title>
   <meta name="description" content="Thank you for contacting Music with Annie.">
   <meta name="author" content="Anna Thurston">
-  <link rel="icon" href="images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/medium.css" media="(min-width:768px)">
-  <link rel="stylesheet" href="css/large.css" media="(min-width:1024px)">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width:768px)">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width:1024px)">
   <script type="module" defer>
     const params = new URLSearchParams(location.search);
     const out = document.getElementById('results');
@@ -21,7 +23,7 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html"><img src="images/music-logo.webp" alt="" width="24" height="24" loading="lazy"><span>Music with Annie</span></a>
+      <a class="brand" href="index.html"><img src="images/music-logo.webp" alt="Music logo" width="24" height="24" loading="lazy"><span>Music with Annie</span></a>
       <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
       <nav id="site-nav" class="nav hidden" aria-label="Primary">
         <a href="index.html">Home</a>
