@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Music with Annie — Private piano & violin lessons and early childhood music classes." />
+  <meta name="author" content="Anna Thurston" />
+  <meta property="og:title" content="Music with Annie" />
+  <meta property="og:description" content="Private piano & violin lessons and early childhood music classes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero.jpg" />
+  <title>Music with Annie — Home</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css">
+  <link rel="stylesheet" href="css/large.css">
+  <script type="module" src="js/schedule.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Music with Annie home">
+        <img src="images/music-logo.webp" alt="" width="24" height="24" loading="lazy">
+        <span>Music with Annie</span>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+      <nav id="site-nav" class="nav hidden" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="about-contact.html">About/Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <picture>
+        <img src="images/hero.webp" alt="Students learning music with Annie" loading="lazy" width="1600" height="900">
+      </picture>
+      <div class="hero-text">
+        <h1>Learn. Play. Grow.</h1>
+        <p>Private piano & violin lessons and early childhood music classes.</p>
+        <a class="btn cta" href="lessons.html">View Lessons</a>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h2 class="section-title">Lessons & Classes</h2>
+      <div id="lesson-cards" class="cards fade-list">
+        <!-- schedule.js will inject limited lessons and the "View All Lessons" button -->
+      </div>
+    </section>
+
+    <section class="upcoming-schedule container">
+      <h2 class="section-title">Upcoming Sessions</h2>
+      <div id="schedule-grid" class="cards fade-list">
+        <!-- schedule.js will inject limited sessions here -->
+      </div>
+    </section>
+
+    <section class="testimonials container">
+      <h2 class="section-title">What Families Say</h2>
+      <div id="testimonials-grid" class="cards testimonials-grid">
+        <article class="quote">
+          <p>“Annie makes learning fun and engaging.”</p>
+          <span class="cite">— Parent, piano student</span>
+        </article>
+        <article class="quote">
+          <p>“My child can’t wait for every class.”</p>
+          <span class="cite">— Caregiver, early childhood</span>
+        </article>
+        <article class="quote">
+          <p>“Technique improved noticeably in weeks.”</p>
+          <span class="cite">— Violin student</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:annie@example.com">annie@example.com</a></p>
+        <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+          <li><a href="about-contact.html">About/Contact</a></li>
+          <li><a href="#">Demo Video</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <p class="social">
+          <a href="#" aria-label="Facebook">Facebook</a> ·
+          <a href="#" aria-label="Instagram">Instagram</a> ·
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Accessible Modal -->
+  <dialog id="app-modal" class="modal" aria-labelledby="modal-title">
+    <form method="dialog" class="modal-inner">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h3 id="modal-title"></h3>
+      <div id="modal-content"></div>
+      <menu class="modal-actions">
+        <button value="close" class="btn">Close</button>
+        <a id="modal-cta" class="btn cta" href="about-contact.html">Contact</a>
+      </menu>
+    </form>
+  </dialog>
+</body>
+</html>

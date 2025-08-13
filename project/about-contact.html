@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music with Annie — About & Contact</title>
+  <meta name="description" content="Meet Annie and get in touch. Send a message or request availability.">
+  <meta name="author" content="Anna Thurston">
+  <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css" media="(min-width:768px)">
+  <link rel="stylesheet" href="css/large.css" media="(min-width:1024px)">
+  <script type="module" src="js/schedule.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="images/music-logo.webp" alt="" width="24" height="24" loading="lazy"><span>Music with Annie</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+      <nav id="site-nav" class="nav hidden" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="about-contact.html" class="active">About/Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h1>About Annie</h1>
+      <p>Hi! I’m Annie, a private music educator offering piano, violin, and early childhood classes. I focus on healthy technique, musical joy, and consistent growth.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <form id="contact-form" action="thankyou.html" method="GET" novalidate>
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="interest">Interest</label>
+          <select id="interest" name="interest" required>
+            <option value="">Choose…</option>
+            <option value="piano">Piano</option>
+            <option value="violin">Violin</option>
+            <option value="early-childhood">Early Childhood</option>
+          </select>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="actions">
+          <button class="btn cta" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:annie@example.com">annie@example.com</a></p>
+        <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+          <li><a href="about-contact.html">About/Contact</a></li>
+          <li><a href="#">Demo Video</a></li>
+          <li><a href="#">Attributions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <p class="social">
+          <a href="#" aria-label="Facebook">Facebook</a> ·
+          <a href="#" aria-label="Instagram">Instagram</a> ·
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="app-modal" class="modal" aria-labelledby="modal-title">
+    <form method="dialog" class="modal-inner">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h3 id="modal-title"></h3>
+      <div id="modal-content"></div>
+      <menu class="modal-actions">
+        <button value="close" class="btn">Close</button>
+      </menu>
+    </form>
+  </dialog>
+</body>
+</html>

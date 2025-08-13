@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music with Annie — Thanks</title>
+  <meta name="description" content="Thank you for contacting Music with Annie.">
+  <meta name="author" content="Anna Thurston">
+  <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css" media="(min-width:768px)">
+  <link rel="stylesheet" href="css/large.css" media="(min-width:1024px)">
+  <script type="module" defer>
+    const params = new URLSearchParams(location.search);
+    const out = document.getElementById('results');
+    const rows = [...params.entries()].map(([k,v]) => `<tr><th>${k}</th><td>${v}</td></tr>`).join('');
+    out.innerHTML = rows || '<tr><td colspan="2">No form data found.</td></tr>';
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="images/music-logo.webp" alt="" width="24" height="24" loading="lazy"><span>Music with Annie</span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+      <nav id="site-nav" class="nav hidden" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="about-contact.html" class="active">About/Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Thank You!</h1>
+    <p>We received your message. Here’s a copy of your submission:</p>
+    <table class="results">
+      <tbody id="results"></tbody>
+    </table>
+    <p><a class="btn" href="index.html">Return Home</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:annie@example.com">annie@example.com</a></p>
+        <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+          <li><a href="about-contact.html">About/Contact</a></li>
+          <li><a href="#">Demo Video</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <p class="social">
+          <a href="#" aria-label="Facebook">Facebook</a> ·
+          <a href="#" aria-label="Instagram">Instagram</a> ·
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

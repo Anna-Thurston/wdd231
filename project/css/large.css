@@ -1,0 +1,16 @@
+/* 1024px+ */
+@media (min-width:1024px){
+  #lesson-cards, #schedule-grid {
+    display: grid;
+  }
+  .container { 
+    padding: 2rem; 
+  }
+  .section-title { font-size: 2rem; }
+  .cards { 
+    gap: 1.25rem; 
+  }
+  .card {
+    grid-template-columns: 1fr 2fr;
+  }
+}

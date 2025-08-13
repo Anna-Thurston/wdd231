@@ -1,0 +1,182 @@
+{
+  "offerings": [
+    {
+      "id": "p1",
+      "title": "Beginner Piano",
+      "category": "piano",
+      "level": "Beginner",
+      "duration": "30 min",
+      "price": "$25",
+      "instructor": "Anna Thurston",
+      "description": "An introduction to piano basics, proper posture, and note reading."
+    },
+    {
+      "id": "p2",
+      "title": "Intermediate Piano",
+      "category": "piano",
+      "level": "Intermediate",
+      "duration": "45 min",
+      "price": "$35",
+      "instructor": "David Kim",
+      "description": "Build on your skills with scales, chords, and more advanced repertoire."
+    },
+    {
+      "id": "p3",
+      "title": "Advanced Piano Performance",
+      "category": "piano",
+      "level": "Advanced",
+      "duration": "60 min",
+      "price": "$50",
+      "instructor": "Sophia Martinez",
+      "description": "Focus on technique, artistry, and performance preparation."
+    },
+    {
+      "id": "v1",
+      "title": "Beginner Violin",
+      "category": "violin",
+      "level": "Beginner",
+      "duration": "30 min",
+      "price": "$25",
+      "instructor": "James Lee",
+      "description": "Learn violin basics, bow hold, and first pieces."
+    },
+    {
+      "id": "v2",
+      "title": "Intermediate Violin",
+      "category": "violin",
+      "level": "Intermediate",
+      "duration": "45 min",
+      "price": "$35",
+      "instructor": "Mia Chen",
+      "description": "Improve intonation, vibrato, and repertoire."
+    },
+    {
+      "id": "v3",
+      "title": "Advanced Violin Performance",
+      "category": "violin",
+      "level": "Advanced",
+      "duration": "60 min",
+      "price": "$50",
+      "instructor": "Ethan Carter",
+      "description": "Polish technique and artistry for concerts or competitions."
+    },
+    {
+      "id": "ec1",
+      "title": "Early Childhood Music & Movement",
+      "category": "early-childhood",
+      "level": "Ages 3-5",
+      "duration": "30 min",
+      "price": "$20",
+      "instructor": "Grace Thompson",
+      "description": "Songs, games, and rhythm activities for young learners."
+    },
+    {
+      "id": "ec2",
+      "title": "Family Music Time",
+      "category": "early-childhood",
+      "level": "All ages",
+      "duration": "45 min",
+      "price": "$25",
+      "instructor": "Olivia Brown",
+      "description": "Fun and interactive class for families to enjoy music together."
+    }
+  ],
+  "sessions": [
+    {
+      "id": "sp1",
+      "title": "Piano Workshop: Jazz Improvisation",
+      "level": "Intermediate-Advanced",
+      "duration": "90 min",
+      "price": "$40",
+      "day": "Saturday",
+      "time": "10:00 AM",
+      "location": "Studio A",
+      "instructor": "Anna Thurston",
+      "description": "Explore jazz styles and improvisational skills."
+    },
+    {
+      "id": "sp2",
+      "title": "Violin Ensemble Rehearsal",
+      "level": "Intermediate",
+      "duration": "60 min",
+      "price": "$15",
+      "day": "Wednesday",
+      "time": "5:00 PM",
+      "location": "Room 3",
+      "instructor": "James Lee",
+      "description": "Group practice and performance preparation."
+    },
+    {
+      "id": "sp3",
+      "title": "Piano Duet Day",
+      "level": "All levels",
+      "duration": "60 min",
+      "price": "$20",
+      "day": "Friday",
+      "time": "4:00 PM",
+      "location": "Studio B",
+      "instructor": "David Kim",
+      "description": "Pair up and learn duet repertoire."
+    },
+    {
+      "id": "sp4",
+      "title": "String Quartet Coaching",
+      "level": "Advanced",
+      "duration": "90 min",
+      "price": "$50",
+      "day": "Thursday",
+      "time": "7:00 PM",
+      "location": "Main Hall",
+      "instructor": "Mia Chen",
+      "description": "Work with an experienced coach to refine ensemble skills."
+    },
+    {
+      "id": "sp5",
+      "title": "Early Childhood Music Camp",
+      "level": "Ages 3-5",
+      "duration": "45 min",
+      "price": "$25",
+      "day": "Monday",
+      "time": "9:30 AM",
+      "location": "Room 1",
+      "instructor": "Grace Thompson",
+      "description": "A week-long music camp for preschoolers."
+    },
+    {
+      "id": "sp6",
+      "title": "Violin Technique Bootcamp",
+      "level": "All levels",
+      "duration": "60 min",
+      "price": "$30",
+      "day": "Tuesday",
+      "time": "6:00 PM",
+      "location": "Room 4",
+      "instructor": "Ethan Carter",
+      "description": "Intense focus on bowing, shifting, and vibrato."
+    },
+    {
+      "id": "sp7",
+      "title": "Piano Masterclass with Guest Artist",
+      "level": "Advanced",
+      "duration": "120 min",
+      "price": "$60",
+      "day": "Sunday",
+      "time": "2:00 PM",
+      "location": "Main Hall",
+      "instructor": "Sophia Martinez",
+      "description": "Receive expert feedback in front of a live audience."
+    },
+    {
+      "id": "sp8",
+      "title": "Family Music Jam",
+      "level": "All ages",
+      "duration": "60 min",
+      "price": "$15",
+      "day": "Saturday",
+      "time": "11:30 AM",
+      "location": "Outdoor Stage",
+      "instructor": "Olivia Brown",
+      "description": "Bring instruments and join the fun!"
+    }
+  ]
+}
