@@ -15,7 +15,9 @@ function cardTemplate(item, index) {
       <img src="${imgSrc}" alt="${item.title}" loading="lazy">
       <h3>${item.title}</h3>
       <p>${item.level} • ${item.duration} • ${item.price}</p>
-      <button class="btn outline" data-modal="lessons" data-id="${item.id}">Details</button>
+      <button class="btn outline" data-modal="lessons" data-id="${item.id}">
+        Details
+      </button>
     </article>
   `;
 }
@@ -26,7 +28,9 @@ function sessionTemplate(s, index) {
       <h3>${s.title}</h3>
       <p>${s.day} @ ${s.time} • ${s.location}</p>
       <p>${s.level} • ${s.duration} • ${s.price}</p>
-      <button class="btn" data-modal="lessons" data-id="${s.id}">More Info</button>
+      <button class="btn" data-modal="lessons" data-id="${s.id}">
+        More Info
+      </button>
     </article>
   `;
 }
