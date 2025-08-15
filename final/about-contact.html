@@ -33,12 +33,12 @@
   </header>
 
   <main class="container">
-    <section class="about">
+    <section>
       <h1>About Annie</h1>
       <p>Hi! I’m Annie, a private music educator offering piano, violin, and early childhood classes. I focus on healthy technique, musical joy, and consistent growth.</p>
     </section>
 
-    <section class="contact">
+    <section>
       <h2>Contact</h2>
       <form id="contact-form" action="thankyou.html" method="GET" novalidate>
         <div class="field">
@@ -51,7 +51,7 @@
           <input id="email" name="email" type="email" autocomplete="email" required>
           <small class="error" aria-live="polite"></small>
         </div>
-        <div class="field">
+        <div>
           <label for="interest">Interest</label>
           <select id="interest" name="interest" required>
             <option value="">Choose…</option>
@@ -59,14 +59,14 @@
             <option value="violin">Violin</option>
             <option value="early-childhood">Early Childhood</option>
           </select>
-          <small class="error" aria-live="polite"></small>
+          <small aria-live="polite"></small>
         </div>
         <div class="field">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
           <small class="error" aria-live="polite"></small>
         </div>
-        <div class="actions">
+        <div>
           <button class="btn cta" type="submit">Send</button>
         </div>
       </form>
