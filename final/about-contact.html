@@ -39,38 +39,39 @@
     </section>
 
     <section>
-      <h2>Contact</h2>
-      <form id="contact-form" action="thankyou.html" method="GET" novalidate>
-        <div>
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
-          <small aria-live="polite"></small>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
-          <small aria-live="polite"></small>
-        </div>
-        <div>
-          <label for="interest">Interest</label>
-          <select id="interest" name="interest" required>
-            <option value="">Choose…</option>
-            <option value="piano">Piano</option>
-            <option value="violin">Violin</option>
-            <option value="early-childhood">Early Childhood</option>
-          </select>
-          <small aria-live="polite"></small>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          <small aria-live="polite"></small>
-        </div>
-        <div>
-          <button class="btn cta" type="submit">Send</button>
-        </div>
-      </form>
-    </section>
+  <h2>Contact</h2>
+  <form id="contact-form" action="thankyou.html" method="GET" novalidate>
+    <div>
+      <label for="name">Full Name:</label>
+      <input id="name" name="name" type="text" placeholder="First and last name" autocomplete="name" required>
+      <small aria-live="polite"></small>
+    </div>
+    <div>
+      <label for="email">Email Address:</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <small aria-live="polite"></small>
+    </div>
+    <div>
+      <label for="interest">Interest:</label>
+      <select id="interest" name="interest" required>
+        <option value="">-- Select Interest --</option>
+        <option value="piano">Piano</option>
+        <option value="violin">Violin</option>
+        <option value="early-childhood">Early Childhood</option>
+      </select>
+      <small aria-live="polite"></small>
+    </div>
+    <div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Tell us more about your request" rows="5" required></textarea>
+      <small aria-live="polite"></small>
+    </div>
+    <div>
+      <button type="submit">Send</button>
+    </div>
+  </form>
+</section>
+
   </main>
 
   <footer class="site-footer">
